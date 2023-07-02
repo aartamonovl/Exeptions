@@ -8,7 +8,7 @@ public class WriteToTxt {
         try (FileWriter writer = new FileWriter(human.getLastName(), true)){
             writer.write(human.toString() + "\n");
         } catch (IOException e) {
-            throw new RuntimeException("Ошибка при записи в файл." + e);
+            throw new RuntimeException("Ошибка при записи в файл." + e.getStackTrace());
         }
     }
 }
